@@ -6,8 +6,8 @@
 
 .dm-video-viewers .dm-viewer-stage {
   position: relative;
-  width: 100%;
-  min-height: 400px;
+  width: auto;
+  height: 400px;
   background: #000;
   border-radius: 8px;
   overflow: hidden;
