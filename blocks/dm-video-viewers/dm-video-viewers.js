@@ -10,19 +10,19 @@ function getViewerUrl(block) {
   return block.textContent?.trim() || '';
 }
 
-function toHttp(str) {
-  return str.replace(/^https:/i, 'http:');
+function toHttps(str) {
+  return str.replace(/^http:/i, 'https:');
 }
 
 function parseViewerUrl(rawUrl) {
   try {
-    const url = new URL(toHttp(rawUrl));
+    const url = new URL(toHttps(rawUrl));
     const viewerType = url.pathname.split('/').pop()?.replace(/\.html$/i, '') || '';
     if (!viewerType) return null;
 
     const get = (key) => {
       const entry = [...url.searchParams].find(([k]) => k.toLowerCase() === key.toLowerCase());
-      return entry ? toHttp(entry[1]) : '';
+      return entry ? toHttps(entry[1]) : '';
     };
 
     const base = `${url.protocol}//${url.host}`;
