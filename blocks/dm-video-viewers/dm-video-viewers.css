@@ -1,11 +1,13 @@
 .dm-video-viewers.block {
   display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .dm-video-viewers .dm-viewer-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  min-height: 400px;
   background: #000;
   border-radius: 8px;
   overflow: hidden;
