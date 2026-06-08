@@ -1,7 +1,5 @@
 .dm-video-viewers.block {
   display: block;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
 }
 
 .dm-video-viewers .dm-viewer-stage {
@@ -19,4 +17,6 @@
   inset: 0;
   width: 100% !important;
   height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
